@@ -1,0 +1,41 @@
+<main style="display:flex;flex-direction:column;height:100%">
+  <!-- 1. Barra de herramientas -->
+  <div class="topbar">
+    <div class="row">
+      <strong>Herramientas</strong>
+    </div>
+    <div class="status" id="status">Herramienta: Dibujo</div>
+    <div class="tools" id="tools">
+      <button data-tool="pen">✏️ Dibujo</button>
+      <button data-tool="rect">▭ Rect</button>
+      <button data-tool="circle">◯ Círculo</button>
+      <button data-tool="line">／ Línea</button>
+      <button data-tool="text">🔤 Texto</button>
+      <button data-tool="select">🔲 Seleccionar</button>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <label>Grosor <input id="size" type="range" min="1" max="10" value="3"></label>
+      <label>Color <input id="color" type="color" value="#0b5cff"></label>
+      <button id="undo">↶ Deshacer</button>
+      <button id="clear">🗑️ Limpiar</button>
+    </div>
+  </div>
+
+  <!-- 2. Tablero de dibujo -->
+  <div class="canvas-wrap" style="flex:1;position:relative;margin-top:8px;">
+    <canvas id="board"></canvas>
+  </div>
+
+  <!-- 3. Generador HTML -->
+  <div class="html-builder" style="margin-top:8px">
+    <div class="row">
+      <input id="pageTitle" placeholder="Título HTML" style="flex:1">
+      <button id="genHtml">Generar HTML</button>
+    </div>
+    <textarea id="htmlOutput" class="html-preview" spellcheck="false"></textarea>
+    <div class="row" style="margin-top:4px">
+      <button id="downloadHtml">⬇️ Descargar HTML</button>
+      <button id="openNew">🔗 Abrir en nueva pestaña</button>
+    </div>
+  </div>
+</main>
